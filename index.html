@@ -17,87 +17,125 @@
     </header>
     <div class="background">
         <div class="title-categories">
-            <p>Escolha seu prato!</p>
+        <p>Escolha seu prato!</p>
         </div>
-        <article> 
-        <div class="options-box">
-            <div class="info-food">
+        <section> 
+        <div class="options-box plate">
+            <div class="info-food plate1" onclick="foodSelection('plate1','plate','Risoto com cogumelos',40.00)">
                 <img src="./images/risoto.jpeg" alt="risoto-com-cogumelos">
                 <p class="title-food">Risoto com cogumelos</p>
                 <p class="description-food">Risoto com muito cogumelo e queijo parmesão.</p>
                 <p class="price"> R$ 40,00</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div class="info-food">
-                <img src="./images/lasanha.jpeg" alt="lasanha-à-bolonhesa">
+            <div class="info-food plate2" onclick="foodSelection('plate2','plate','Lasanha a bolonhesa',30.00)">
+                <img src="./images/lasanha.jpeg" alt="Lasanha-à-bolonhesa">
                 <p class="title-food">Lasanha a bolonhesa</p>
                 <p class="description-food">Lasanha à bolonhesa, feita com a carne patinho e queijo provolone. Porção de 500g.</p>
                 <p class="price"> R$ 30,00</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div class="info-food">
+            <div class="info-food plate3" onclick="foodSelection('plate3','plate','Salada Caesar',45.00)">
                 <img src="./images/salada caesar.jpg" alt="Salada-Caesar">
                 <p class="title-food">Salada Caesar</p>
                 <p class="description-food">Alface e rúcula, tomate seco, peito de frango,croutons de pão integral, queijo parmesão e molho da casa.</p>
                 <p class="price"> R$ 45,00</p>
+                <ion-icon name="checkmark-circle"></ion-icon>
             </div>   
         </div>
-        </article>
+        </section>
         <div class="title-categories">
             <p> A bebida não pode faltar!</p>
         </div>
-        <article>
-            <div class="options-box">
-                <div class="info-food">
+        <section>
+            <div class="options-box drink">
+                <div class="info-food drink1" onclick="foodSelection('drink1','drink','Suco',15.00)">
                     <img src="./images/suco-de-melancia-com-morango-e-limao.png" alt="suco-de-melancia-com-morango-e-limao">
                     <p class="title-food">Suco.</p>
                     <p class="description-food">Suco de melância com morango e limão.</p>
                     <p class="price"> R$ 15,00</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="info-food">
+                <div class="info-food drink2" onclick="foodSelection('drink2','drink','Soda italiana',17.5)">
                     <img src="./images/soda italiana.jpeg" alt="Soda-italiana">
                     <p class="title-food">Soda italiana.</p>
                     <p class="description-food">Soda italiana de limão.</p>
-                    <p class="price"> R$ 17,00</p>
+                    <p class="price"> R$ 17,50</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="info-food">
+                <div class="info-food drink3" onclick="foodSelection('drink3','drink','Água mineral',4.00)">
                     <img src="./images/agua-mineral.jpg" alt="Água mineral">
                     <p class="title-food">Água mineral.</p>
                     <p class="description-food">500 ml</p>
                     <p class="price"> R$ 4,00</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
+                
             </div>
-        </article>
+        </section>
         <div class="title-categories">
-            <p> E agora uma sobremesa para adoçara vida!</p>
+            <p> E agora uma sobremesa para adoçar a vida!</p>
         </div>
-        <article>
-            <div class="options-box">
-                <div class="info-food">
+        <section>
+            <div class="options-box dessert">
+                <div class="info-food dessert1" onclick="foodSelection('dessert1','dessert','Creme de Cupuaçú',20.00)">
                     <img src="./images/creme-de-Cupuaçú.jpg" alt="creme-de-Cupuaçú">
                     <p class="title-food">Creme de Cupuaçú.</p>
                     <p class="description-food">Atenção, contém açúcar e lactose.</p>
                     <p class="price"> R$ 20,00</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="info-food">
+                <div class="info-food dessert2" onclick="foodSelection('dessert2','dessert','Brownie',10.00)">
                     <img src="./images/brownie.jpg" alt="brownie">
                     <p class="title-food">Brownie.</p>
                     <p class="description-food">Brownie com nozes e chocolate meio amargo.</p>
                     <p class="price"> R$ 10,00</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
-                <div class="info-food">
+                <div class="info-food dessert3" onclick="foodSelection('dessert3','dessert','Pudim',8.00)">
                     <img src="./images/pudim.webp" alt="Pudim">
                     <p class="title-food">Pudim.</p>
                     <p class="description-food">Pudim de leite condensado.</p>
                     <p class="price"> R$ 8,00</p>
+                    <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
             </div>
-        </article>
+        </section>
         <footer>
-            <button>
-                <p>Selecione os 3 itens, para fechar o pedido.</p>
+            <button type="button" disabled="true" onclick="orderConfirmation()">
+                 <p>Selecione os 3 itens, para fechar o pedido.</p>
             </button>
-           
+        
         </footer>
-    </div>
 
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+    </div>
+    <div class="transparent hide">
+        <div class="confirmation">
+            <p class="title-confirmation">Confirme seu pedido</p>
+            <div class="info">
+                <div class="names">
+                    <p class="name-plate"> nome do prato</p>
+                    <p class="name-drink"> nome do prato</p>
+                    <p class="name-dessert"> nome do prato</p>
+                    <p class="total">Total</p>
+                </div>
+                <div class="prices">
+                    <p class="price-plate"> 2000</p>
+                    <p class="price-drink"> 20000</p>
+                    <p class="price-dessert"> 20000</p>
+                    <p class="total-price"> 40000</p>
+                </div>
+            </div>
+            
+            <button class="right" onclick="lastConfirmation()"> 
+                <p>Confirmar! Bora comer.</p>
+            </button>
+            <button class="wrong" onclick="cancelar()"> 
+                <p>Cancelar.</p>
+            </button>
+        </div>
+    </div>
 </body>
 </html>

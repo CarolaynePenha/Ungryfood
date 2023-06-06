@@ -33,7 +33,7 @@ header {
   padding-top: 92px;
   padding-bottom: 122px;
 }
-article {
+section {
   overflow-x: scroll;
 }
 .options-box {
@@ -63,6 +63,22 @@ article {
   border-radius: 9px;
   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.35);
 }
+.info-food ion-icon {
+  display: none;
+}
+
+.selected {
+  border: 5px solid #32b72f;
+}
+.selected ion-icon {
+  color: #32b72f;
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 20px;
+}
+
 .info-food img {
   width: 144px;
   height: 87px;
@@ -92,6 +108,96 @@ article {
   left: 19px;
   bottom: 10px;
 }
+
+/* tela de confirmação */
+.fixed {
+  position: fixed;
+}
+.transparent {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hide {
+  display: none;
+}
+.confirmation {
+  width: 377px;
+  height: 353px;
+  background-color: #50d074;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.confirmation p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+.info p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+.title-confirmation {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20px;
+}
+.info {
+  display: flex;
+  width: 300px;
+  height: 200px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 60px;
+  margin-bottom: 140px;
+}
+.info p {
+  margin: 10px 0;
+}
+.names {
+  /* margin-right: 40px; */
+}
+.total {
+  font-weight: bold;
+}
+.right {
+  position: absolute;
+  background-color: #ffffff;
+  bottom: 75px;
+  border: 0;
+  border-radius: 50px;
+  width: 80%;
+  height: 50px;
+}
+.right a {
+  text-decoration: none;
+}
+.right p {
+  color: #50d074;
+}
+.wrong {
+  position: absolute;
+  bottom: 10px;
+  background-color: #50d074;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-radius: 50px;
+  width: 80%;
+  height: 50px;
+}
 /* footer */
 footer {
   width: 100%;
@@ -104,14 +210,15 @@ footer {
   justify-content: center;
   align-items: center;
 }
-button {
+footer button {
   width: 364px;
   height: 61px;
   background: #cbcbcb;
   border-radius: 50px;
   border: 0;
 }
-button p {
+
+footer button p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -119,4 +226,7 @@ button p {
   text-align: center;
   letter-spacing: 0.018em;
   color: #ffffff;
+}
+.activate {
+  background-color: #32b72f;
 }
